@@ -64,13 +64,13 @@ header i {
 }
 
 .w-100{
-    width: calc(100% - 4px);
+    grid-column: span 4;
 }
 .w-50 {
-    width: calc(50% - 4px);
+    grid-column: span 2;
 }
 .w-25 {
-    width: calc(25% - 4px);
+    grid-column: span 1;
 }
 
 .main_title{
@@ -79,6 +79,11 @@ header i {
 .forecsat_list {
     width: 100%;
     max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
     background-color: $primaryTextColor;
     font-size: 0;
     margin: 0 auto;
@@ -86,9 +91,10 @@ header i {
 
 .forecast_item {
     display: inline-block;
-    height: 147px;
+    min-height: 147px;
+    height: 100%;
     text-align: center;
-
+    // grid-column: span 1;
     padding: 26px 0 27px;
     margin: 2px;
 }

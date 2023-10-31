@@ -1,72 +1,5 @@
-const forecast = [ 
-{   
-    itemWidth: 'w-50',
-    capital: 'lisbon',
-    temperature:21,
-    wiIcon: 'wi-day-sunny',
-},
-{
-    itemWidth: 'w-25',
-    capital:'paris',
-    temperature: 11,
-    wiIcon: 'wi-night-sleet',
-},
-{
-    itemWidth: 'w-25',
-    capital: 'belgrad',
-    temperature: 15,
-    wiIcon: 'wi-day-cloudy', 
-},
-{
-    itemWidth: 'w-25',
-    capital: 'venice',
-    temperature: 21,
-    wiIcon: 'wi-day-cloudy-high',
-},
-{
-    itemWidth: 'w-25',
-    capital: 'tel-aviv',
-    temperature: 32,
-    wiIcon: 'wi-hot',
-},
-{
-    itemWidth: 'w-25',
-    capital: 'cair',
-    temperature: 21,
-    wiIcon: 'wi-day-sunny',
-},
-{
-    itemWidth: 'w-25',
-    capital: 'new-york',
-    temperature: 17,
-    wiIcon: 'wi-day-sleet-storm',
-},
-{
-    itemWidth: 'w-25',
-    capital: 'new-delhi',
-    temperature: 17,
-    wiIcon: 'wi-rain-wind',
-},
-{
-    itemWidth: 'w-50',
-    capital: 'san-francisco',
-    temperature: 15,
-    wiIcon: 'wi-day-cloudy',
-},
-{
-    itemWidth: 'w-25',
-    capital: 'tokio',
-    temperature: 8,
-    wiIcon: 'wi-day-sunny',
-},
-{
-    itemWidth: 'w-100',
-    capital: 'sydney',
-    temperature: 25,
-    wiIcon: 'wi-night-cloudy',
-}
-]
 const el = React.createElement;
+
 class App extends React.Component {
     constructor(props) {
         super(props)
@@ -113,17 +46,17 @@ class Main extends React.Component {
         super(props),
         this.state = {
             forecast: [ 
-                {itemWidth: 'forecast_item w-50', capital: 'lisbon', temperature:21, wiIcon: 'wi wi-day-sunny', id: 1},
-                {itemWidth: 'forecast_item w-25', capital:'paris', temperature: 11, wiIcon: 'wi wi-night-sleet', id: 2},
-                {itemWidth: 'forecast_item w-25', capital: 'belgrad', temperature: 15, wiIcon: 'wi wi-day-cloudy', id: 3},
-                {itemWidth: 'forecast_item w-25', capital: 'venice', temperature: 21, wiIcon: 'wi wi-day-cloudy-high', id: 4},
-                {itemWidth: 'forecast_item w-25', capital: 'tel-aviv', temperature: 32, wiIcon: 'wi wi-hot', id: 5},
-                {itemWidth: 'forecast_item w-25', capital: 'cair', temperature: 21, wiIcon: 'wi wi-day-sunny', id: 6},
-                {itemWidth: 'forecast_item w-25', capital: 'new-york', temperature: 17, wiIcon: 'wi wi-day-sleet-storm', id: 7},
-                {itemWidth: 'forecast_item w-25', capital: 'new-delhi', temperature: 17, wiIcon: 'wi wi-rain-wind', id: 8},
-                {itemWidth: 'forecast_item w-50', capital: 'san-francisco', temperature: 15, wiIcon: 'wi wi-day-cloudy', id: 9},
-                {itemWidth: 'forecast_item w-25', capital: 'tokio', temperature: 8, wiIcon: 'wi wi-day-sunny', id: 10},
-                {itemWidth: 'forecast_item w-100', capital: 'sydney', temperature: 25, wiIcon: 'wi wi-night-cloudy', id: 11}
+                {itemWidth: 'w-50', capital: 'lisbon', temperature:21, wiIcon: 'wi-day-sunny', id: 1},
+                {itemWidth: 'w-25', capital:'paris', temperature: 11, wiIcon: 'wi-night-sleet', id: 2},
+                {itemWidth: 'w-25', capital: 'belgrad', temperature: 15, wiIcon: 'wi-day-cloudy', id: 3},
+                {itemWidth: 'w-25', capital: 'venice', temperature: 21, wiIcon: 'wi-day-cloudy-high', id: 4},
+                {itemWidth: 'w-25', capital: 'tel-aviv', temperature: 32, wiIcon: 'wi-hot', id: 5},
+                {itemWidth: 'w-25', capital: 'cair', temperature: 21, wiIcon: 'wi-day-sunny', id: 6},
+                {itemWidth: 'w-25', capital: 'new-york', temperature: 17, wiIcon: 'wi-day-sleet-storm', id: 7},
+                {itemWidth: 'w-25', capital: 'new-delhi', temperature: 17, wiIcon: 'wi-rain-wind', id: 8},
+                {itemWidth: 'w-50', capital: 'san-francisco', temperature: 15, wiIcon: 'wi-day-cloudy', id: 9},
+                {itemWidth: 'w-25', capital: 'tokio', temperature: 8, wiIcon: 'wi-day-sunny', id: 10},
+                {itemWidth: 'w-100', capital: 'sydney', temperature: 25, wiIcon: 'wi-night-cloudy', id: 11}
                 ]
         }
     }
@@ -135,7 +68,7 @@ class Main extends React.Component {
                     <div className="container">
                         <ul className="forecsat_list">
                             {forecast.map(({ itemWidth, capital, temperature, wiIcon, id }) => {
-                               return  <ForecastItems width={itemWidth} city={capital} temp={temperature} icon={wiIcon}/>
+                               return  <ForecastItems width={itemWidth} city={capital} temp={temperature} icon={wiIcon} key={id}/>
                                 })
                             }
                         </ul>
@@ -150,11 +83,11 @@ class ForecastItems extends React.Component {
         super(props)
     }
     render() {
-        const { width, city, temp, icon } = this.props;
+        const { width, city, temp, icon, keyId } = this.props;
         return(
-            <li key={city} className={width} >
+            <li key={keyId} className={`forecast_item ${width}`} >
                 <p className="forecast_item-capital">{city}</p>
-                <p className="forecast_item-temperature">{temp}°C<i className={icon}></i></p>
+                <p className="forecast_item-temperature">{temp}°C<i className={`wi ${icon}`}></i></p>
             </li>
         )
     }

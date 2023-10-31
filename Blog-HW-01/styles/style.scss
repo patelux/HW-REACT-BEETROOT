@@ -1,0 +1,205 @@
+@import './base/reset';
+
+@import './utils/variables';
+
+@import './utils/mixins';
+
+@import './components/container';
+
+
+.page_wrapper{
+    max-width: 1177px;
+    margin: 0 auto;
+}
+
+.main-title{
+    display: none;
+}
+.section-title{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+// Header-----
+.header {
+    background-color: $sectionBgColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    .container{
+    text-align: center;
+    padding: 6px 0px 5px 0px;
+    .section-title{
+        text-align: center;
+    }
+}
+}
+.main_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+    background-color: $logoBgColor;
+    width: 181px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    @include tablet{
+        width: 140px;
+        height: auto;
+        margin-top: 5px;
+    }
+    @include mobile{
+        width: 120px;
+        height: auto;
+    }
+}
+.logo-wrapper .logo_link {
+    transition: transform 0.3s ease;
+    &:hover, &:focus{
+        transform: scale(1.2);
+    }
+}
+.logo {
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
+}
+
+.social-links-wrapper {
+    @include mobile{
+        padding-right: 42px;
+    }
+       
+}
+.social-link-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 19px;
+    @include tablet{
+         gap: 10px;
+    }
+    @include mobile{
+        gap: 10px;  
+    }
+}
+.social-link {
+    width: 46px;
+    height: 37px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid rgba($secondaryTextColor, .4);
+    // border-radius: 50%;
+    background-color: $navBgColor;
+    transition: all 0.3s ease;
+    @include tablet{
+        width: 30px;
+        height: 30px;
+        i {
+            font-size: 16px;
+        }
+    }
+    @include mobile{
+        width: 20px;
+        height: 20px;
+        i {
+            font-size: 12px;
+        }
+    }
+}
+.social-link-item{
+    &:hover .social-link,
+    &:focus .social-link {
+        transform: scale(1.1);
+    }     
+    &:hover .icon-social-link,
+    &:focus .icon-social-link{
+        color: $primaryTextColor;
+    }}
+
+
+.icon-social-link {
+    font-size: 12px;
+    color: $primaryTextColor;
+    transition: all 0.3s ease;
+}
+
+// MAIN 
+// Hero
+.hero{
+    background-color: $sectionBgColor;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    margin-bottom: 24px;
+    .section-title{
+        text-align: center;
+    }
+}
+
+// Blogsection
+.blog-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 67px;
+    .blog{
+        background-color: $sectionBgColor;
+        text-align: center;
+        min-height: 437px;
+        height: 100%;
+        padding: 17px 20px 24px 26px;
+        .section-title{
+            margin-bottom: 15px;
+        }
+        .blog-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 27px;
+        }
+        .blog-item{
+            display: block;
+            background-color: $blogItemBgColor;
+            height: 70px;
+            min-width: 759px;
+        }
+    }
+    .news{
+        background-color: $sectionBgColor;
+        text-align: center;
+        min-height: 437px;
+        height: 100%;
+        padding: 17px 28px 29px 25px;
+        .section-title{
+            margin-bottom: 15px;
+        }
+        .news-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+        }
+        .news-item{
+            display: block;
+            background-color: $newsItemBgColor;
+            height: 110px;
+            min-width: 247px;
+        }
+    }
+}
+// Blog
+
+// News

@@ -6,7 +6,7 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="main-content">
                 <h1 className="main-title"></h1>
                 <Header />
                 <Main />
@@ -16,11 +16,21 @@ class App extends React.Component {
 }
 class Header extends React.Component {
     constructor(props) {
-        super(props)
+        super(props),
+        this.state = {
+            socialLinks: [ 
+                {id: 11, hrefLink:"https://www.facebook.com", ariaLabel:"facebook", linkIcon:"fa-brands fa-facebook-f"},
+                {id: 12, hrefLink:"https://twitter.com", ariaLabel:"twitter", linkIcon:"fa-brands fa-twitter"},
+                {id: 14, hrefLink:"https://www.instagram.com", ariaLabel:"instagram", linkIcon:"fa-brands fa-instagram"},
+                {id: 15, hrefLink:"https://www.facebook.com", ariaLabel:"facebook", linkIcon:"fa-brands fa-facebook-f"},
+                {id: 16, hrefLink:"https://twitter.com", ariaLabel:"twitter", linkIcon:"fa-brands fa-twitter"}
+                ]
+        }
     }
     render() {
+        const { socialLinks } = this.state;
         return (
-            <header className="header">
+            <div className="header">
                 <div className="container">
                 <nav className="main_nav">
                     <div className="logo-wrapper">
@@ -33,35 +43,35 @@ class Header extends React.Component {
 
                     <div className="social-links-wrapper">
                         <ul className="social-link-list">
-                            <li className="social-link-item">
-                                <a href="#" aria-label="" className="social-link" target="_blank" rel="noopener noreferrer">
-                                </a>
-                            </li>
-                            <li className="social-link-item">
-                                <a href="#" aria-label="" className="social-link" target="_blank" rel="noopener noreferrer">
-                                </a>
-                            </li>
-                            <li class="social-link-item">
-                                <a href="#" aria-label="" className="social-link" target="_blank" rel="noopener noreferrer">
-                                </a>
-                            </li>
-                            <li class="social-link-item">
-                                <a href="#" aria-label="" className="social-link" target="_blank" rel="noopener noreferrer">
-                                </a>
-                            </li>
-                            <li class="social-link-item">
-                                <a href="#" aria-label="" className="social-link" target="_blank" rel="noopener noreferrer">
-                                </a>
-                            </li>
+                            {socialLinks.map(({ id, hrefLink, ariaLabel, linkIcon }) => {
+                               return  <SocialLink keyId={id} hrefLink={hrefLink} ariaLabel={ariaLabel} icon={linkIcon}/>
+                                })
+                            }
                         </ul>
                     </div>
                 </nav>
                 
                 </div>
-            </header> 
+            </div> 
         )
     }
 }
+class SocialLink extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    render() {
+        const { keyId, hrefLink, ariaLabel, icon } = this.props;
+        return (
+            <li key={keyId} className="social-link-item">
+                <a href={hrefLink} aria-label={ariaLabel} className="social-link" target="_blank" rel="noopener noreferrer">
+                <i className={`${icon} icon-social-link`}></i>
+                </a>
+            </li>
+        )
+    }
+}
+
 class Main extends React.Component {
     constructor(props){
         super(props)

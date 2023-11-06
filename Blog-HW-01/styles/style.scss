@@ -9,7 +9,7 @@
 
 .page_wrapper{
     max-width: 1177px;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .main-title{
@@ -47,15 +47,13 @@
     height: 37px;
     display: flex;
     align-items: center;
-    @include tablet{
-        width: 140px;
-        height: auto;
-        margin-top: 5px;
-    }
-    @include mobile{
-        width: 120px;
-        height: auto;
-    }
+    // @include tablet{
+    //     width: 140px;
+    //     margin-top: 5px;
+    // }
+    // @include mobile{
+    //     width: 120px;
+    // }
 }
 .logo-wrapper .logo_link {
     transition: transform 0.3s ease;
@@ -69,12 +67,6 @@
     object-position: left;
 }
 
-.social-links-wrapper {
-    @include mobile{
-        padding-right: 42px;
-    }
-       
-}
 .social-link-list {
     display: flex;
     flex-direction: row;
@@ -158,6 +150,7 @@
         text-align: center;
         min-height: 437px;
         height: 100%;
+        width: calc((100% - 67px) * .73);
         padding: 17px 20px 24px 26px;
         .section-title{
             margin-bottom: 15px;
@@ -173,7 +166,7 @@
             display: block;
             background-color: $blogItemBgColor;
             height: 70px;
-            min-width: 759px;
+            width: 100%;
         }
     }
     .news{
@@ -181,6 +174,7 @@
         text-align: center;
         min-height: 437px;
         height: 100%;
+        width: calc((100% - 67px) * .27);
         padding: 17px 28px 29px 25px;
         .section-title{
             margin-bottom: 15px;
@@ -196,7 +190,7 @@
             display: block;
             background-color: $newsItemBgColor;
             height: 110px;
-            min-width: 247px;
+            width: 100%;
         }
     }
 }

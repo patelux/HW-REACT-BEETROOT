@@ -46,7 +46,7 @@ function Header () {
                                 <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=482,fit=crop,q=95/mp8X1bjpqQi4Jb4b/logo-mjEP3GBGkwsyjj33.png" alt="" className="logo"/>
                             </a>
                         </div>
-                        <h2 className="section-title">Helth life</h2>
+                        <h2 className="section-title">Health life</h2>
                         <div className="social-links-wrapper">
                             <ul className="social-link-list">
                                 {list}

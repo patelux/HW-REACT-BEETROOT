@@ -33,7 +33,7 @@ function Header () {
         let list;
         if(searchResults.length) {
             list = searchResults.map((item, index) => {
-                return (<SocialLink item={item} key={index}/>)
+                return (<SocialLinks item={item} key={index}/>)
             })
         }
 
@@ -57,7 +57,7 @@ function Header () {
             </div> 
         )
 }
-function SocialLink (props) {
+function SocialLinks (props) {
         const { hrefLink, ariaLabel, linkIcon } = props.item;
         const keyId = props.key;
         return (

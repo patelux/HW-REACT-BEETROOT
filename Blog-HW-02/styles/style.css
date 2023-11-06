@@ -55,7 +55,6 @@ body {
 .container {
   position: relative;
   width: 90%;
-  max-width: 1123x;
   margin: 0 auto;
 }
 
@@ -70,7 +69,7 @@ body {
 
 .section-title {
   font-family: inherit;
-  font-size: 24pxt;
+  font-size: 24px;
   color: inherit;
   text-transform: uppercase;
 }
@@ -87,7 +86,6 @@ body {
   padding: 6px 0px 5px 0px;
 }
 .header .container .section-title {
-  font-size: 38px;
   text-align: center;
 }
 
@@ -204,7 +202,8 @@ body {
   text-align: center;
 }
 .hero .section-title {
-  padding: 20px 10px;
+  font-size: 38px;
+  padding: 20px 20px;
   color: white;
   background-color: rgba(255, 255, 255, 0.3);
   display: inline-block;

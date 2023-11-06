@@ -17,10 +17,9 @@
 }
 .section-title{
     font-family: inherit;
-    font-size: 24pxt;
+    font-size: 24px;
     color: inherit;
     text-transform: uppercase;
-
 }
 // Header-----
 .header {
@@ -33,7 +32,6 @@
     text-align: center;
     padding: 6px 0px 5px 0px;
     .section-title{
-        font-size: 38px;
         text-align: center;
     }
 }
@@ -145,7 +143,8 @@
         text-align: center;
     }
     .section-title{
-        padding: 20px 10px;
+        font-size: 38px;
+        padding: 20px 20px;
         color: rgb(255, 255, 255);
         background-color: rgba(255, 255, 255, 0.3);
         display: inline-block;

@@ -59,9 +59,9 @@ function Header () {
 }
 function SocialLinks (props) {
         const { hrefLink, ariaLabel, linkIcon } = props.item;
-        const keyId = props.key;
+        // const keyId = props.key;
         return (
-            <li key={keyId} className="social-link-item">
+            <li className="social-link-item">
                 <a href={hrefLink} aria-label={ariaLabel} className="social-link" target="_blank" rel="noopener noreferrer">
                 <i className={`${linkIcon} icon-social-link`}></i>
                 </a>
@@ -162,9 +162,9 @@ function News () {
 }
 function BlogItem (props) {
         const { title, blogItem } = props.item;
-        const key = props.key;
+        // const key = props.key;
         return (
-                <li key={key} className="blog-item">
+                <li className="blog-item">
                     <h3 className="blog_item-title">{title}</h3>
                     <p className="blog_item-description">{blogItem}</p>
                 </li>             
@@ -173,9 +173,9 @@ function BlogItem (props) {
 
 function NewsItem (props) {
         const { newsitem, data, author} = props.item;
-        const key = props.key;
+        // const key = props.key;
         return (
-                <li key={key} className="news-item">
+                <li className="news-item">
                     <p className="news_item-description">{newsitem}</p>
                     <p className="news_item-data">{data}</p>
                     <p className="news_item-author">{author}</p>

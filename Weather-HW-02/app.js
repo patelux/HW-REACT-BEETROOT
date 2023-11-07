@@ -62,10 +62,9 @@ function Main () {
         )
 }
 function ForecastItems (props) {
-    const keyId = props.key;
     const { itemWidth, capital, temperature, wiIcon } = props.item;
         return(
-            <li key={keyId} className={`forecast_item ${itemWidth}`} >
+            <li className={`forecast_item ${itemWidth}`} >
                 <p className="forecast_item-capital">{capital}</p>
                 <p className="forecast_item-temperature">{temperature}°C
                     <i className={`wi ${wiIcon}`}></i>

@@ -110,7 +110,7 @@ class Footer extends React.Component {
 
 const app = document.getElementById('pageWrapper');
 const root = ReactDOM.createRoot(app);
-root.render(React.createElement(App))
+root.render(<React.StrictMode>{React.createElement(App)}</React.StrictMode>)
 
 
 

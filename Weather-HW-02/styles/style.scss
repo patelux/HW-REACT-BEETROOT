@@ -82,54 +82,101 @@ header i {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
     background-color: $primaryTextColor;
     font-size: 0;
     margin: 0 auto;
+    padding: 2px;
 }
 
 .forecast_item {
     display: inline-block;
     min-height: 147px;
-    height: 100%;
+    color: #FFF;
+    // height: 100%;
     text-align: center;
     // grid-column: span 1;
     padding: 26px 0 27px;
     margin: 2px;
+    transition: all $transitionFunc;
 }
 .forecast_item:nth-of-type(1) {
     background-color: #3399CC;
+    &:hover, &:focus{
+        color:  #3399CC;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(2) {
     background-color: #33CCCC;
+        &:hover, &:focus{
+        color:  #3399CC;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(3) {
     background-color: #996699;
+        &:hover, &:focus{
+        color:  #996699;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(4) {
     background-color: #C24747;
+        &:hover, &:focus{
+        color:  #C24747;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(5) {
     background-color: #E2674A;
+        &:hover, &:focus{
+        color:  #E2674A;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(6) {
     background-color: #FFCC66;
+        &:hover, &:focus{
+        color:  #FFCC66;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(7) {
     background-color: #99CC99;
+        &:hover, &:focus{
+        color:  #99CC99;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(8){
     background-color: #669999;
+        &:hover, &:focus{
+        color:  #669999;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(9){
     background-color: #CC6699;
+        &:hover, &:focus{
+        color:  #CC6699;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(10) {
     background-color: #339966;
+        &:hover, &:focus{
+        color:  #339966;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item:nth-of-type(11) {
     background-color: #666699;
+        &:hover, &:focus{
+        color:  #666699;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 .forecast_item p:first-of-type {
     margin-bottom: 19px;
@@ -141,10 +188,12 @@ header i {
 .forecast_item-capital {
     @include city;
     text-transform: capitalize;
+    color: inherit;
 }
 
 .forecast_item-temperature {
     @include temperature;
+    color: inherit;
 }
 
 .wi {

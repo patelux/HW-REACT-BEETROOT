@@ -63,8 +63,23 @@ function Main () {
 }
 function ForecastItems (props) {
     const { itemWidth, capital, temperature, wiIcon } = props.item;
+    const clickHandler = (e) => {
+        changeColor();
+    }
+
+    function getRandomHexColor(index) {
+        console.log(index);
+        return `#${Math.floor(Math.random() * 16777215 + index).toString(16)}`;
+      }
+           
+      function changeColor() {
+        const itemsForecast = Array.from(document.querySelectorAll('.forecast_item'));
+        itemsForecast.forEach((el, index) => {
+            el.style.backgroundColor = `${getRandomHexColor(index)}`});
+      }
+
         return(
-            <li className={`forecast_item ${itemWidth}`} >
+            <li className={`forecast_item ${itemWidth}`} onClick={clickHandler}>
                 <p className="forecast_item-capital">{capital}</p>
                 <p className="forecast_item-temperature">{temperature}°C
                     <i className={`wi ${wiIcon}`}></i>

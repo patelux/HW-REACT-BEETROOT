@@ -141,64 +141,110 @@ header i {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
   background-color: #FFF;
   font-size: 0;
   margin: 0 auto;
+  padding: 2px;
 }
 
 .forecast_item {
   display: inline-block;
   min-height: 147px;
-  height: 100%;
+  color: #FFF;
   text-align: center;
   padding: 26px 0 27px;
   margin: 2px;
+  transition: all 0.5s ease;
 }
 
 .forecast_item:nth-of-type(1) {
   background-color: #3399CC;
 }
+.forecast_item:nth-of-type(1):hover, .forecast_item:nth-of-type(1):focus {
+  color: #3399CC;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .forecast_item:nth-of-type(2) {
   background-color: #33CCCC;
+}
+.forecast_item:nth-of-type(2):hover, .forecast_item:nth-of-type(2):focus {
+  color: #3399CC;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .forecast_item:nth-of-type(3) {
   background-color: #996699;
 }
+.forecast_item:nth-of-type(3):hover, .forecast_item:nth-of-type(3):focus {
+  color: #996699;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .forecast_item:nth-of-type(4) {
   background-color: #C24747;
+}
+.forecast_item:nth-of-type(4):hover, .forecast_item:nth-of-type(4):focus {
+  color: #C24747;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .forecast_item:nth-of-type(5) {
   background-color: #E2674A;
 }
+.forecast_item:nth-of-type(5):hover, .forecast_item:nth-of-type(5):focus {
+  color: #E2674A;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .forecast_item:nth-of-type(6) {
   background-color: #FFCC66;
+}
+.forecast_item:nth-of-type(6):hover, .forecast_item:nth-of-type(6):focus {
+  color: #FFCC66;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .forecast_item:nth-of-type(7) {
   background-color: #99CC99;
 }
+.forecast_item:nth-of-type(7):hover, .forecast_item:nth-of-type(7):focus {
+  color: #99CC99;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .forecast_item:nth-of-type(8) {
   background-color: #669999;
+}
+.forecast_item:nth-of-type(8):hover, .forecast_item:nth-of-type(8):focus {
+  color: #669999;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .forecast_item:nth-of-type(9) {
   background-color: #CC6699;
 }
+.forecast_item:nth-of-type(9):hover, .forecast_item:nth-of-type(9):focus {
+  color: #CC6699;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .forecast_item:nth-of-type(10) {
   background-color: #339966;
 }
+.forecast_item:nth-of-type(10):hover, .forecast_item:nth-of-type(10):focus {
+  color: #339966;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .forecast_item:nth-of-type(11) {
   background-color: #666699;
+}
+.forecast_item:nth-of-type(11):hover, .forecast_item:nth-of-type(11):focus {
+  color: #666699;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .forecast_item p:first-of-type {
@@ -216,6 +262,7 @@ header i {
   font-family: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
   font-size: 22px;
   text-transform: capitalize;
+  color: inherit;
 }
 
 .forecast_item-temperature {
@@ -226,6 +273,7 @@ header i {
   font-size: 22px;
   opacity: 0.7;
   text-transform: uppercase;
+  color: inherit;
 }
 
 .wi {
@@ -241,4 +289,4 @@ header i {
   color: #FFF;
   font-family: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
   font-size: 16px;
-}/*# sourceMappingURL=style.css.map */
+}
